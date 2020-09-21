@@ -1,0 +1,270 @@
+/*variables*/
+
+:root {
+	--max-width: 1200px;
+	--primary-color: #c72727;
+	--secondary-color: #f99500;
+	--ent-color: #a66bbe;
+	--tech-color: #009cff;
+	--dark-color: #333;
+	--light-color: #fff;
+}
+
+/*reset*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*global styling*/
+
+body {
+	font-family: 'Lato', sans-serif;
+	line-height: 1.5;
+	background: #f3f3f3;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Staatliches', Arial, Helvetica, sans-serif;
+	line-height: 1.3;
+	margin-bottom: 1rem;
+}
+p {
+	margin: 0.5rem 0;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: var(--dark-color);
+}
+img {
+	width: 100%;
+}
+
+/*utilits clases*/
+
+.container {
+	max-width: var(--max-width);
+	padding: 0 1.5rem;
+	overflow: hidden;
+	margin: auto;
+}
+.curent {
+	background: var(--primary-color);
+	color: var(--light-color);
+}
+.btn {
+	display: inline-block;
+	border: none;
+	border-radius: 5px;
+	padding: 0.5rem 0.75rem;
+}
+.btn:hover {
+	opacity: 0.8;
+}
+.btn-block {
+	display: block;
+	width: 90%;
+	padding: 0.7rem 0;
+	text-align: center;
+}
+.category {
+	font-size: 0.8rem;
+	border-radius: 15px;
+	display: inline-block;
+	padding: 0.3rem 0.5rem;
+	text-transform: uppercase;
+	color: #fff;
+	margin-bottom: 0.6rem;
+}
+.category-sports {
+	background: var(--secondary-color);
+}
+.category-ent {
+	background: var(--ent-color);
+}
+.category-tech {
+	background: var(--tech-color);
+}
+.l-heading {
+	font-size: 3rem;
+}
+.card {
+	padding: 1rem;
+	background: #fff;
+}
+
+.bg-dark {
+	background: var(--dark-color);
+	color: #fff;
+}
+.bg-primary {
+	background: var(--primary-color);
+	color: #fff;
+}
+.bg-secondary {
+	background: var(--secondary-color);
+	color: #fff;
+}
+.bg-primary a,
+.bg-dark a {
+	color: #fff;
+}
+
+.list li {
+	padding: .7rem 0;
+	border-bottom: 1px dotted #777;
+}
+.list li a:hover {
+	color: var(--primary-color) !important;
+}
+.auther {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem;
+	font-size: 0.8rem;
+	background: #f4f4f4;
+}
+.auther .category {
+	margin-top: .5rem;
+}
+/*navbar*/
+
+#nav-bar {
+	background: var(--light-color);
+	padding: 1rem;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+#nav-bar .container {
+	display: grid;
+	grid-template-columns: 5fr 2fr 1fr;
+	align-items: center;
+	justify-content: center;
+}
+#nav-bar .logo {
+	width: 180px;
+}
+#nav-bar .social {
+	color: #ddd;
+	justify-content: center;
+	display: flex;
+}
+#nav-bar .social i {
+	margin-right: 0.5rem;
+	color: #aaa;
+}
+#nav-bar .links {
+	display: flex;
+	font-size: 1.3rem;
+}
+#nav-bar .links li {
+	margin-right: 0.5rem;
+}
+#nav-bar .links a:hover {
+	background: #ddd;
+	color: var(--dark-color);
+}
+
+/*show case*/
+
+#showcase {
+	background: var(--dark-color);
+	color: var(--light-color);
+	padding: 2rem;
+	position: relative;
+}
+#showcase::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../img/featured.jpg) no-repeat center center/cover;
+	height: 100%;
+	width: 100%;
+	opacity: 0.4;
+}
+
+#showcase .showcase-container {
+	display: flex;
+	flex-direction: column;
+	height: 50vh;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+#showcase .content {
+	max-width: 450px;
+	z-index: 1;
+}
+
+/* articles*/
+#articles {
+	padding: 2rem;
+}
+#articles .article-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+}
+
+#articles .article-container > *:first-child,
+#articles .article-container > *:last-child {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column: 1/span 2;
+	gap: 1rem;
+}
+#articles .article-container > *:last-child {
+	grid-column: 2/span 2;
+}
+
+/*footer*/
+#footer {
+	background: var(--dark-color);
+	padding: 2rem;
+	color: #fff;
+}
+#footer .footer-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1.5rem;
+}
+#footer .footer-container > *:last-child {
+	grid-column: 1/span 4;
+	padding: 1rem;
+	background: #555;
+	text-align: center;
+}
+#footer .footer-container input[type='email'] {
+	margin-bottom: 0.7rem;
+}
+#footer .footer-container a {
+	color: #fff;
+}
+#articles .article-container .page {
+	grid-row: 1/span 4;
+}
+
+/*about */
+#about {
+	margin: 2rem 0;
+}
+#about .container {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	gap: 2rem;
+}
+#about .page {
+	grid-row: 1/span 4;
+}
